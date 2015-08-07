@@ -171,6 +171,12 @@ If you are configuring an application that has some funky requirements and need 
     <td><tt></tt></td>
   </tr>
   <tr>
+    <td><tt>['passenger-nginx']['passenger']['apps'][n]['listen_redirect']</tt></td>
+    <td>Integer</td>
+    <td>What port to listen to for http to https redirects: e.g. 8080</td>
+    <td><tt></tt></td>
+  </tr>
+  <tr>
     <td><tt>['passenger-nginx']['passenger']['apps'][n]['root']</tt></td>
     <td>String</td>
     <td>Path to application: e.g. "/var/www/my-application"</td>
