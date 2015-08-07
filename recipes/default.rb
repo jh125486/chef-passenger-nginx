@@ -30,17 +30,11 @@ if platform_family?('debian')
     user "root"
   end
 
-<<<<<<< HEAD
   # Install basic packages
   apt_package %w(git build-essential curl libcurl4-openssl-dev libpcre3 libpcre3-dev)
 elsif platform_family?('rhel')
   # RHEL prereqs
    yum_package %w(git curl libcurl libcurl-devel pcre pcre-devel)
-=======
-# Install basic packages
-%w(git build-essential curl libcurl4-openssl-dev libpcre3 libpcre3-dev).each do |pkg|
-  apt_package pkg
->>>>>>> feature/listen_ports
 end
 
 execute "Installing GPG keys so that RVM won't barf on installation" do
@@ -242,6 +236,5 @@ end
 
 # Restart(start) nginx
 service "nginx" do
-  action :restart 
+  action :restart
 end
-
