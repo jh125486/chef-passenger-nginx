@@ -8,8 +8,6 @@ version          '0.9.15'
 
 supports 'ubuntu'
 
-%w{ redhat centos scientific oracle }.each do |rhel|
+%w(redhat centos scientific oracle).each do |rhel|
   supports rhel, ">= 6.0"
 end
-
-depends 'rvm'
